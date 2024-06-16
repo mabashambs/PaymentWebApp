@@ -84,7 +84,7 @@ namespace PaymentWebApp.Controllers
             _context.PaymentDetails.Add(paymentDetail);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetPaymentDetail", new { id = paymentDetail.PaymentDetailId }, paymentDetail);
+            return CreatedAtAction("InsertPaymentDetail", new { id = paymentDetail.PaymentDetailId }, paymentDetail);
         }
 
         // DELETE: api/PaymentDetail/5
